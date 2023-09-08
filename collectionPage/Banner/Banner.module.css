@@ -1,0 +1,28 @@
+.banner_img {
+    width: 100%;
+}
+
+.banner_img_img {
+    width: 100%;
+    height: 300px;
+}
+
+.banner_img_mobile {
+    width: 100%;
+}
+
+.banner_img_mobile_img {
+    width: 100%;
+    height: 300px;
+    display: none;
+}
+
+@media screen and (max-width: 35em) {
+    .banner_img_mobile_img {
+        display: block;
+    }
+    
+    .banner_img_img {
+        display: none;
+    }
+}
