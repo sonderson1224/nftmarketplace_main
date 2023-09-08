@@ -1,0 +1,9 @@
+.connect {
+  text-align: center;
+  border: 1px solid var(--icons-color);
+  margin-bottom: 5rem;
+  padding: 3rem;
+  width: 50%;
+  border-radius: 10px;
+  margin: 5rem auto;
+}

@@ -1,0 +1,57 @@
+.listingPrice_box_price {
+  margin-top: 5rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.form {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid var(--icons-color);
+  border-radius: 1rem;
+  margin-top: 5rem;
+}
+
+.form_box_input {
+  margin-top: 2rem;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.form_box_input label {
+  display: block;
+  width: 100%;
+  margin-left: 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.form_box_input_price {
+  width: 100%;
+  border: 1px solid var(--icons-color);
+  padding: 1rem;
+  background-color: transparent;
+  margin-top: 0.5rem;
+  outline: none;
+  border-radius: 1rem;
+}
+
+.btn_box {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 2rem 2rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border: 1px solid var(--icons-color);
+  border-radius: 1rem;
+  color: var(--icons-color);
+  background-color: var(--main-bg-color);
+  margin-bottom: 2rem;
+}
