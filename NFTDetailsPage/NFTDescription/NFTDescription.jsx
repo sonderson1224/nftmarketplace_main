@@ -329,7 +329,34 @@ const NFTDescription = ({ nft, currentAccount }) => {
               </div>
 
               <div className={Style.NFTDescription_box_profile_bidding_box_btn}>
-                {currentAccount.toLowerCase() == nft.owner.toLowerCase() ? (
+                
+                  {currentAccount &&
+                  nft.owner &&
+                  currentAccount.toLowerCase() === nft.owner.toLowerCase() ? (
+                    <Button
+                      icon={<FaWallet />}
+                      btnText="List on Marketplace"
+                      handleClick={() => {
+                        console.log("owner");
+                        router.push(
+                          `/reSellToken?id=${nft.tokenId}&tokenURI=${nft.tokenURI}&price=${nft.price}`
+                        );
+                      }}
+                      classStyle={Style.button}
+                    />
+                  ) : (
+                    <Button
+                      icon={<FaPercentage />}
+                      btnText="Buy NFT"
+                      handleClick={() => {
+                        changeLoader();
+                        buyNFT(nft.tokenId, () => changeLoader());
+                      }}
+                      classStyle={Style.button}
+                    />
+                  )}
+                
+                {/* {currentAccount.toLowerCase() == nft.owner.toLowerCase() ? (
                   <Button
                     icon={<FaWallet />}
                     btnText="List on Marketplace"
@@ -350,21 +377,31 @@ const NFTDescription = ({ nft, currentAccount }) => {
                         {nft.tokenId ? (
                           <></>
                         ) : (
-                          // <Button
-                          //   icon={<FaPercentage />}
-                          //   btnText="Buy NFT"
-                          //   handleClick={() => {
-                          //     changeLoader();
-                          //     buyNFT(nft.tokenId, () => changeLoader());
-                          //   }}
-                          //   classStyle={Style.button}
-                          // />
-                          <Loader />
+                          <Button
+                            icon={<FaPercentage />}
+                            btnText="Buy NFT"
+                            handleClick={() => {
+                              changeLoader();
+                              buyNFT(nft.tokenId, () => changeLoader());
+                            }}
+                            classStyle={Style.button}
+                          />
                         )}
+                        <Loader />
                       </>
                     )}
                   </>
-                )}
+                )} */}
+
+                {/* <Button
+                  icon={<FaPercentage />}
+                  btnText="Buy NFT"
+                  handleClick={() => {
+                    changeLoader();
+                    buyNFT(nft.tokenId, () => changeLoader());
+                  }}
+                  classStyle={Style.button}
+                /> */}
 
                 {/* <Button
                 icon={<FaPercentage />}
